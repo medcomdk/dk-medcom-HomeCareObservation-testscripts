@@ -3,7 +3,7 @@
 // SUSHI will look for definitions in any file using the .fsh ending.
 Profile: MyPatient
 Parent: Patient
-Description: "An example profile of the Patient resource."
+Description: "An example profile of the Patient resource. HEJ"
 * name 1..* MS
 
 Instance: PatientExample
