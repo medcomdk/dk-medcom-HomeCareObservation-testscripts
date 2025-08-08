@@ -4,3 +4,4 @@ Alias: $ProducentID = http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProdu
 Alias: $DiagnosticReportCodeSystem = http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes
 Alias: $PractitionerRole = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ
 Alias: $HCOActivityCodes = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes
+Alias: $ECPRCodes = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-ecpr-codes
