@@ -1,7 +1,7 @@
 {
     "package-id": "medcom.fhir.dk.homecareobservationtestscripts",
     "version": "1.0.0-draft",
-    "path": "http://medcomfhir.dk/ig/homecareobservationtestscripts",
+    "path": "http://medcomfhir.dk/ig/homecareobservationtestscripts/1.0.0-draft",
     "status": "draft",
     "sequence": "Release 1.x.x",
     "mode" : "milestone",
