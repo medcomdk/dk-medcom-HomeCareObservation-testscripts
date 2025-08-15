@@ -48,9 +48,7 @@ InstanceOf: MedComCorePatient
 Title: "Bruno Test Elmer"
 Description: "Patient described with minimal information. Valid only if used in a Bundle."
 Usage: #inline
-* identifier[cpr]
-  * system = "urn:oid:1.2.208.176.1.2"
-  * value = "2509479989"
+* identifier[cpr].value = "2509479989"
 * name[official]
   * use = #official
   * given = "Bruno"
@@ -60,9 +58,8 @@ Instance: PeterHansenECPRPatient
 InstanceOf: MedComCorePatient
 Title: "Peter Hansen ECPR Patient"
 Description: "Peter Hansen with a ECPR"
-* identifier[ecpr]
-  * system = $ECPRCodes#nationalEcprregister
-  * value = "0703921VJ5"
+Usage: #inline
+* identifier[x-ecpr].value = "0703921VJ5"
 * name[official]
   * use = #official
   * given = "Peter"
@@ -71,7 +68,7 @@ Description: "Peter Hansen with a ECPR"
 Instance: GlucoseObservationOnBrunoNoComment
 InstanceOf: MedComHomeCareObservation
 Title: "Glucose measurement"
-Description: "Glucose measurement on the subject"
+Description: "Glucose measurement on Bruno Elmer"
 Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU22089 "P(kB)—Glucose; stofk. = ? mmol/L"
@@ -84,7 +81,7 @@ Usage: #inline
 Instance: GlucoseObservationOnPeterNoComment
 InstanceOf: MedComHomeCareObservation
 Title: "Glucose measurement"
-Description: "Glucose measurement on the subject"
+Description: "Glucose measurement on Peter Hansen"
 Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU22089 "P(kB)—Glucose; stofk. = ? mmol/L"
@@ -99,7 +96,7 @@ Instance: HeartRateObservationOnBrunoWithAnalysisComment
 InstanceOf: MedComHomeCareObservation
 Title: "Heart Rate With Analysis Comment On Bruno"
 Description: "The note.text field is used to provide an analysis comment on the heart rate observation on bruno"
-Usage: #example
+Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU21692 "Hjerte—Systole; frekv. = ? × 1/min"
 * valueQuantity.value = 147
@@ -113,7 +110,7 @@ Instance: CReaktiveProteinObservationOnBrunoWithComment
 InstanceOf: MedComHomeCareObservation
 Title: "C-reaktive protein [CRP];P on Bruno"
 Description: "C-reaktive protein [CRP] test performed by acute care team on Bruno."
-Usage: #example
+Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU19748 "P—C-reaktivt protein; massek. = ? mg/L"
 * valueQuantity.value = 26
@@ -127,7 +124,7 @@ Instance: HaemoglobinObservationOnBrunoWithComment
 InstanceOf: MedComHomeCareObservation
 Title: "Observation of the haemoglobin on Bruno"
 Description: "Observation of the haemoglobin on Bruno"
-Usage: #example
+Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU].code = $NPUObservationCodes#NPU02319 "B—Hæmoglobin(Fe); stofk. = ? mmol/L"
 * valueQuantity.value = 7.8
@@ -141,7 +138,7 @@ Instance: LeukocytObservationOnBrunoWithComment
 InstanceOf: MedComHomeCareObservation
 Title: "Leukocyt Observation on Bruno"
 Description: "Test of leucocyte on Bruno by acute care team"
-Usage: #example
+Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU02593 "B—Leukocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 8.1
@@ -155,7 +152,7 @@ Instance: LymphocyteObservationOnBrunoWithComment
 InstanceOf:  MedComHomeCareObservation
 Title: "Lymphocyte observation on Bruno"
 Description: "Lymphocyte observation on Bruno by acute care team"
-Usage: #example
+Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU02636 "B—Leukocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 2.7
@@ -169,7 +166,7 @@ Instance: MonocytesObservationOnBrunoWithComment
 InstanceOf: MedComHomeCareObservation
 Title: "Monocytes observation on Bruno"
 Description: "Monocytes observation on Bruno by acute care team"
-Usage: #example
+Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU02840 "B—Monocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 0.8
@@ -183,7 +180,7 @@ Instance: NeutrophilocytesObservationOnBrunoWithComment
 InstanceOf: MedComHomeCareObservation
 Title: "Neutrophilocytes observation on Bruno"
 Description: "Neutrophilocytes observation on Bruno by acute care team"
-Usage: #example
+Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU02902 "B—Neutrophilocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 10.2
@@ -197,7 +194,7 @@ Instance: EosinofilocytObservationOnBrunoWithComment
 InstanceOf: MedComHomeCareObservation
 Title: "Eosinofilocyt observation on Bruno"
 Description: "Eosinofilocyt observation on Bruno by acute care team"
-Usage: #example
+Usage: #inline
 * status = $ObsStatusCodeSystem#final
 * code.coding[NPU] = $NPUObservationCodes#NPU01933 "B—Eosinophilocytter; antalk. = ? × 10^9/L"
 * valueQuantity.value = 0.11

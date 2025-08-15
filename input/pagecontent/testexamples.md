@@ -1,22 +1,23 @@
-> // TODO: Update this page!
-
-The examples presented below are intended to be used in the test protocol for receiving HospitalNotification. Testprotocols can be found on the [GitHub pages for HospitalNotificaton](https://medcomdk.github.io/dk-medcom-hospitalnotification/#2-test-and-certification). All test examples are created by MedCom. 
+The examples presented below are intended to be used in the test protocol for receiving a HomeCareObservation (HCO) message. Testprotocols can be found on the [GitHub pages for HomeCareObservation](https://medcomdk.github.io/dk_HomeCareObservations/#2-test-and-certification). All test examples are created by MedCom. 
 
 #### Test patient/citizens
-All examples include, except TEK_LOV are based on the test patient:
-* Name: Elmer
+Most examples are based on the test patient:
+* Name: Bruno Elmer
 * CPR-nr.: 250947-9989
-For the example TEK_LOV, the follwoing patient is used:
-* Name: Kaje Test Hansen
-* CPR-nr.: 210300-9996 
 
-#### Test examples for receiving (STANDARDNAME)
 
-[Download test examples for sending a (STANDARDNAME) (.zip)](./TestExamples/CareCommunication_Ex_send.zip)
-<!-- I stifinder, kan man samle filerne i en zip-mappe, hvilket gør det lettere ved download. Eksemplerne ligger under input/resources. -->
+For the tests regarding a temporary CPR, the following patient is used:
+* Name: Peter Hansen
+* CPR-nr.: 250947-9989
+
+
+#### Test examples for receiving HomeCareObservation
 
 |  Test example     |     Description     |
 |---|---|
-| [STIN_A](./Bundle-a5e5b880-c087-4055-b9ec-99108695f81d.html) | Notification with information that a citizen has been admitted to hospital (including request   for XDIS16)    |
-| [STIN_B1](./Bundle-3c4c04ea-a622-4c6e-8e62-307a62d4c851.html)<br> [STIN_B2](./Bundle-64e7f154-668d-4d2a-bf76-2cec049b3252.html)    | Notification   with information that a citizen has been admitted to hospital X, region X   (including request for XDIS16) <br> Notification with   information that the same citizen has now been admitted to hospital Y, region   Y (does not include a request for XDIS16)    |
-
+[R1-3.3.1.1](./Bundle-R1-3.3.1.1-Basic.html) | A basic example with two observations |
+[R1-3.3.2.1](./Bundle-R1-3.3.2.1-BasicWithFileAndComments.html) | Similar to R1-3.3.1.1, but with an image, a clinical comment and an analysis comment. |
+[R1-3.3.2.4](./Bundle-R1-3.3.2.4-BasicWithAttachedFileAndNoComments.html) | Similar to R1-3.3.1.1, but with an image and only on observation with no comment |
+[R1A1-3.3.1](./Bundle-R1A1-3.3.3.1-RefusedConsentToShareResultsNoComments.html) | An alternative flow where the patient has refused consent to share results |
+[3.4.1](./Bundle-3.4.1-TemporaryCPRAndNoComments.html) | An example where the patient has a temporary e-cpr |
+[3.4.5](./Bundle-3.4.5-BigExampleWithFilesCommentsAndMultipleObservations.html) | An example with a lot of observations and multiple images to showcase requirement of supporting both XML and JSON |

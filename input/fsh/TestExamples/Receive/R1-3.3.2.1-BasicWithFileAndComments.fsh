@@ -1,32 +1,32 @@
-Instance: R1-3.3.2.1-BasicWithAttachedFile
+Instance: R1-3.3.2.1-BasicWithFileAndComments
 InstanceOf: MedComHomeCareObservationMessage
 Title: "Receive R1 Attached File"
 Description: "Test Example used in test step 3.3.2.1 of the HomeCareObservation receive test protocol"
 Usage: #example
 * type = $BundleType#message
 * timestamp = 2025-08-08T15:00:00+02:00
-* entry[+].fullUrl = Canonical(R1-3.3.2.1-MessageHeader)
-* entry[+].resource = Reference(R1-3.3.2.1-MessageHeader)
-* entry[+].fullUrl = Canonical(BrunoElmerPatient)
-* entry[+].resource = Reference(BrunoElmerPatient)
-* entry[+].fullUrl = Canonical(R1-3.3.2.1-DiagnosticReport)
-* entry[+].resource = Reference(R1-3.3.2.1-DiagnosticReport)
-* entry[+].fullUrl = Canonical(JohnAcuteNursePractitionerRole)
-* entry[+].resource = Reference(JohnAcuteNursePractitionerRole)
-* entry[+].fullUrl = Canonical(JohnAcuteNurse)
-* entry[+].resource = Reference(JohnAcuteNurse)
-* entry[+].fullUrl = Canonical(AgerskovsLaegePraksisRequesterOrg)
-* entry[+].resource = Reference(AgerskovsLaegePraksisRequesterOrg)
-* entry[+].fullUrl = Canonical(SkovlyAktivitetstilbudProducerOrg)
-* entry[+].resource = Reference(SkovlyAktivitetstilbudProducerOrg)
-* entry[+].fullUrl = Canonical(R1-3.3.2.1-Provenance)
-* entry[+].resource = Reference(R1-3.3.2.1-Provenance)
-* entry[+].fullUrl = Canonical(GlucoseObservationOnBrunoNoComment)
-* entry[+].resource = Reference(GlucoseObservationOnBrunoNoComment)
-* entry[+].fullUrl = Canonical(HeartRateObservationOnBrunoWithAnalysisComment)
-* entry[+].resource = Reference(HeartRateObservationOnBrunoWithAnalysisComment)
-* entry[+].fullUrl = Canonical(PngImageMedComLogo)
-* entry[+].resource = Reference(PngImageMedComLogo)
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/MessageHeader/R1-3.3.2.1-MessageHeader"
+* entry[=].resource = R1-3.3.2.1-MessageHeader
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Patient/BrunoElmerPatient"
+* entry[=].resource = BrunoElmerPatient
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/DiagnosticReport/R1-3.3.2.1-DiagnosticReport"
+* entry[=].resource = R1-3.3.2.1-DiagnosticReport
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/PractitionerRole/JohnAcuteNursePractitionerRole"
+* entry[=].resource = JohnAcuteNursePractitionerRole
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Practitioner/JohnAcuteNurse"
+* entry[=].resource = JohnAcuteNurse
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Organization/AgerskovsLaegePraksisRequesterOrg"
+* entry[=].resource = AgerskovsLaegePraksisRequesterOrg
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Organization/SkovlyAktivitetstilbudProducerOrg"
+* entry[=].resource = SkovlyAktivitetstilbudProducerOrg
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Provenance/R1-3.3.2.1-Provenance"
+* entry[=].resource = R1-3.3.2.1-Provenance
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Observation/GlucoseObservationOnBrunoNoComment"
+* entry[=].resource = GlucoseObservationOnBrunoNoComment
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Observation/HeartRateObservationOnBrunoWithAnalysisComment"
+* entry[=].resource = HeartRateObservationOnBrunoWithAnalysisComment
+* entry[+].fullUrl = "http://medcomfhir.dk/ig/homecareobservation/Media/PngImageMedComLogo"
+* entry[=].resource = PngImageMedComLogo
 
 
 Instance: R1-3.3.2.1-MessageHeader
@@ -54,7 +54,7 @@ Usage: #inline
 * subject = Reference(BrunoElmerPatient)
 * performer[ProducerOrganization] = Reference(SkovlyAktivitetstilbudProducerOrg)
 * performer[PractitionerRole] = Reference(JohnAcuteNursePractitionerRole)
-* media.link[+] = Reference(PngImageMedComLogo)
+* media[+].link = Reference(PngImageMedComLogo)
 * result[+] = Reference(GlucoseObservationOnBrunoNoComment)
 * result[+] = Reference(HeartRateObservationOnBrunoWithAnalysisComment)
 * conclusion = "Glucose measurement OK, heart rate elevated after exercise. Everything looks fine overall."

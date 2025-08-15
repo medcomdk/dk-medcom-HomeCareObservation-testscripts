@@ -1,20 +1,26 @@
-id: medcom.fhir.dk.homecareobservationstestscripts
+id: medcom.fhir.dk.homecareobservationtestscripts
 canonical: https://medcomfhir.dk/ig/homecareobservationtestscripts
 name: HomeCareObservations Testscripts
 title: HomeCareObservations Testscripts
 description: Testscripts for HomeCareObservations FHIR Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 1.0.0-draft
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
-releaseLabel: ci-build
+releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 publisher:
   name: MedCom
-  url: medcom.dk
+  url: https://medcom.dk
   email: fhir@medcom.dk
 
 dependencies:
   medcom.fhir.dk.homecareobservation: 1.1.0-trial-use
+  hl7.fhir.dk.core: 3.4.0
+  medcom.fhir.dk.terminology: 2.0.0-draft
+  medcom.fhir.dk.core: 2.4.0
+  medcom.fhir.dk.messaging: 3.0.0
+  medcom.fhir.dk.messagedefinitions: 1.0.0-trial-use
 
 menu:
   Home: index.html
@@ -26,8 +32,10 @@ menu:
     Downloads: downloads.html
     Dependencies: dependencies.html
 
-instanceOptions:
-  manualSliceOrdering: true # true | false
-
-
-# TODO: Make instances of all the relevant test examples from the receive step
+parameters:
+  apply-version: false
+  default-version: true
+  apply-publisher: false
+  default-publisher: true
+  pin-canonicals: pin-multiples
+  excludettl: true

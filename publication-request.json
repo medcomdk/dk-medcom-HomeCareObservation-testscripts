@@ -1,0 +1,15 @@
+{
+    "package-id": "medcom.fhir.dk.homecareobservationtestscripts",
+    "version": "1.0.0-draft",
+    "path": "http://medcomfhir.dk/ig/homecareobservationtestscripts",
+    "status": "draft",
+    "sequence": "Release 1.x.x",
+    "mode" : "milestone",
+    "descmd": "@release-notes.md",
+    "desc": "First trial release - test examples",
+    "first": true,
+    "ci-build" : "https://build.fhir.org/ig/medcomdk/dk-medcom-homecareobservation-testscripts",
+    "title": "HomeCareObservation Testscripts",
+    "category": "Care Management",
+    "introduction": "The MedCom HomeCareObservation Testscripts Implementation Guide"
+}
