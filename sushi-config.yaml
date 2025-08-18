@@ -1,5 +1,5 @@
 id: medcom.fhir.dk.homecareobservationtestscripts
-canonical: https://medcomfhir.dk/ig/homecareobservationtestscripts
+canonical: http://medcomfhir.dk/ig/homecareobservationtestscripts
 name: HomeCareObservations Testscripts
 title: HomeCareObservations Testscripts
 description: Testscripts for HomeCareObservations FHIR Implementation Guide
