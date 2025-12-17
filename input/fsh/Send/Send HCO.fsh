@@ -1,2 +1,0 @@
-// TODO: Make a touchstone testcase for the testprotocol 3.3.1.1 Given Bruno Elmers CPR, I expect the rest of the patient details (Full Name) to be filled out
-// Basically just receive a homecareobservation where we assert that the CPR and FUllName matches Bruno Elmers, and that it's otherwise valid
